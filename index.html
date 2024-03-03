@@ -1,2 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Netflix UI Survey</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Netflix UI Evaluation Survey</h1>
+        <a href="https://www.netflix.com" target="_blank">Visit Netflix <hr>
+
+         <img src="netflix.jpeg" alt="Netflix UI" style="max-width: 100%; height: auto;">
+        </a>
+        <form class="survey-form">
+            <label for="email">Your Email (optional):</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="visit-frequency">How often do you visit Netflix?</label>
+            <select id="visit-frequency" name="visit_frequency">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="rarely">Rarely</option>
+            </select>
+
+            <label>How do you rate the ease of finding content on Netflix?</label>
+            <div class="rating-section">
+                <label class="container">Excellent
+                  <input type="radio" name="ease_of_finding" value="excellent">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Good
+                  <input type="radio" name="ease_of_finding" value="good">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Fair
+                  <input type="radio" name="ease_of_finding" value="fair">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Poor
+                  <input type="radio" name="ease_of_finding" value="poor">
+                  <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <label for="ui-impression">What is your first impression of the Netflix UI?</label>
+            <textarea id="ui-impression" name="ui_impression" rows="4" cols="50"></textarea>
+
+            <label>Which device do you primarily use to watch Netflix?</label>
+            <div class="device-section">
+                <label class="container">Mobile
+                  <input type="checkbox" name="device" value="mobile">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Tablet
+                  <input type="checkbox" name="device" value="tablet">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Laptop
+                  <input type="checkbox" name="device" value="laptop">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">TV
+                  <input type="checkbox" name="device" value="tv">
+                  <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <label for="content-quality">How would you rate the quality of content available on Netflix?</label>
+            <select id="content-quality" name="content_quality">
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="streaming-quality">How do you find the streaming quality on your devices?</label>
+            <select id="streaming-quality" name="streaming_quality">
+                <option value="always_hd">4K</option>
+                <option value="mostly_hd">FHD</option>
+                <option value="sometimes_hd">HD</option>
+            </select>
+
+            <label>Have you experienced any technical issues while using Netflix?</label>
+            <div class="issue-section">
+                <label class="container">No issues
+                  <input type="radio" name="technical_issues" value="no_issues">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Minor issues
+                  <input type="radio" name="technical_issues" value="minor_issues">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Major issues
+                  <input type="radio" name="technical_issues" value="major_issues">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Frequent issues
+                  <input type="radio" name="technical_issues" value="frequent_issues">
+                  <span class="check"></span>
 
 
+                  <hr>
+                  <input type="button" value="Submit Survey" onclick="alert('Thank you for your feedback!');" />
+                </form>
+                <p class="signature">Survey by: Bariq Talib</p>
+            </div>
+        </body>
+
+                  
+</html>
