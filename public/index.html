@@ -12,8 +12,8 @@
 
          <img src="netflix.jpeg" alt="Netflix UI" style="max-width: 100%; height: auto;">
         </a>
-        <form class="survey-form">
-            <label for="email">Your Email (optional):</label>
+        <form class="survey-form" action="/submit" method="POST">
+          <label for="email">Your Email (optional):</label>
             <input type="email" id="email" name="email" />
 
             <label for="visit-frequency">How often do you visit Netflix?</label>
@@ -102,7 +102,7 @@
 
 
                   <hr>
-                  <input type="button" value="Submit Survey" onclick="alert('Thank you for your feedback!');" />
+                  <input type="submit" value="Submit Survey" />
                 </form>
                 <p class="signature">Survey by: Bariq Talib</p>
             </div>

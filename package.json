@@ -1,7 +1,7 @@
 {
   "name": "group40-lab6",
   "version": "1.0.0",
-  "description": "<h1> THIS IS LAB 1 OF SEG 3125 </h1>",
+  "description": "<h1> THIS IS LAB 6 OF SEG 3125 </h1>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
