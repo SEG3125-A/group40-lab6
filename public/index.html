@@ -1,118 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix UI Survey</title>
-</head>
-<body>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <h1>Netflix UI Evaluation Survey</h1>
-        <a href="https://www.netflix.com" target="_blank">Visit Netflix <hr>
-
-         <img src="netflix.jpeg" alt="Netflix UI" style="max-width: 100%; height: auto;">
-        </a>
-        <form class="survey-form" action="/submit" method="POST">
+      <h1 class="mt-4">Netflix UI Evaluation Survey</h1>
+      <a href="https://www.netflix.com" target="_blank" class="btn btn-primary"
+        >Visit Netflix</a
+      >
+      <hr />
+      <img src="netflix.jpeg" alt="Netflix UI" class="img-fluid mt-4 mb-4" />
+      <form class="survey-form" action="/submit" method="POST">
+        <div class="form-group">
           <label for="email">Your Email (optional):</label>
-            <input type="email" id="email" name="email" />
+          <input type="email" id="email" name="email" class="form-control" />
+        </div>
 
-            <label for="visit-frequency">How often do you visit Netflix?</label>
-            <select id="visit-frequency" name="visit_frequency">
-                <option value="daily">Daily</option>
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-                <option value="rarely">Rarely</option>
-            </select>
+        <div class="form-group">
+          <label for="visit-frequency">How often do you visit Netflix?</label>
+          <select
+            id="visit-frequency"
+            name="visit_frequency"
+            class="form-control"
+          >
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="rarely">Rarely</option>
+          </select>
+        </div>
 
-            <label>How do you rate the ease of finding content on Netflix?</label>
-            <div class="rating-section">
-                <label class="container">Excellent
-                  <input type="radio" name="ease_of_finding" value="excellent">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Good
-                  <input type="radio" name="ease_of_finding" value="good">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Fair
-                  <input type="radio" name="ease_of_finding" value="fair">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Poor
-                  <input type="radio" name="ease_of_finding" value="poor">
-                  <span class="checkmark"></span>
-                </label>
+        <div class="form-group">
+          <label>How do you rate the ease of finding content on Netflix?</label>
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                id="easeExcellent"
+                name="ease_of_finding"
+                value="excellent"
+                class="custom-control-input"
+              />
+              <label class="custom-control-label" for="easeExcellent"
+                >Excellent</label
+              >
             </div>
-
-            <label for="ui-impression">What is your first impression of the Netflix UI?</label>
-            <textarea id="ui-impression" name="ui_impression" rows="4" cols="50"></textarea>
-
-            <label>Which device do you primarily use to watch Netflix?</label>
-            <div class="device-section">
-                <label class="container">Mobile
-                  <input type="checkbox" name="device" value="mobile">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Tablet
-                  <input type="checkbox" name="device" value="tablet">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Laptop
-                  <input type="checkbox" name="device" value="laptop">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">TV
-                  <input type="checkbox" name="device" value="tv">
-                  <span class="checkmark"></span>
-                </label>
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                id="easeGood"
+                name="ease_of_finding"
+                value="good"
+                class="custom-control-input"
+              />
+              <label class="custom-control-label" for="easeGood">Good</label>
             </div>
-
-            <label for="content-quality">How would you rate the quality of content available on Netflix?</label>
-            <select id="content-quality" name="content_quality">
-                <option value="excellent">Excellent</option>
-                <option value="good">Good</option>
-                <option value="average">Average</option>
-                <option value="poor">Poor</option>
-            </select>
-
-            <label for="streaming-quality">How do you find the streaming quality on your devices?</label>
-            <select id="streaming-quality" name="streaming_quality">
-                <option value="always_hd">4K</option>
-                <option value="mostly_hd">FHD</option>
-                <option value="sometimes_hd">HD</option>
-            </select>
-
-            <label>Have you experienced any technical issues while using Netflix?</label>
-            <div class="issue-section">
-                <label class="container">No issues
-                  <input type="radio" name="technical_issues" value="no_issues">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Minor issues
-                  <input type="radio" name="technical_issues" value="minor_issues">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Major issues
-                  <input type="radio" name="technical_issues" value="major_issues">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Frequent issues
-                  <input type="radio" name="technical_issues" value="frequent_issues">
-                  <span class="check"></span>
-
-
-                  <hr>
-                  <input type="submit" value="Submit Survey" />
-                </form>
-                <p class="signature">Survey by: Bariq Talib</p>
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                id="easeFair"
+                name="ease_of_finding"
+                value="fair"
+                class="custom-control-input"
+              />
+              <label class="custom-control-label" for="easeFair">Fair</label>
             </div>
-        </body>
+            <div class="custom-control custom-radio">
+              <input
+                type="radio"
+                id="easePoor"
+                name="ease_of_finding"
+                value="poor"
+                class="custom-control-input"
+              />
+              <label class="custom-control-label" for="easePoor">Poor</label>
+            </div>
+          </div>
+        </div>
 
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <div class="form-group">
+          <label for="ui-impression"
+            >What is your first impression of the Netflix UI?</label
+          >
+          <textarea
+            id="ui-impression"
+            name="ui_impression"
+            rows="4"
+            cols="50"
+            class="form-control"
+          ></textarea>
+        </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <div class="form-group">
+          <label>Which device do you primarily use to watch Netflix?</label>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              name="device"
+              value="mobile"
+              class="form-check-input"
+            />
+            <label class="form-check-label">Mobile</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              name="device"
+              value="tablet"
+              class="form-check-input"
+            />
+            <label class="form-check-label">Tablet</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              name="device"
+              value="laptop"
+              class="form-check-input"
+            />
+            <label class="form-check-label">Laptop</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              name="device"
+              value="tv"
+              class="form-check-input"
+            />
+            <label class="form-check-label">TV</label>
+          </div>
+        </div>
 
-                  
+        <div class="form-group">
+          <label for="content-quality"
+            >How would you rate the quality of content available on
+            Netflix?</label
+          >
+          <select
+            id="content-quality"
+            name="content_quality"
+            class="form-control"
+          >
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="streaming-quality"
+            >How do you find the streaming quality on your devices?</label
+          >
+          <select
+            id="streaming-quality"
+            name="streaming_quality"
+            class="form-control"
+          >
+            <option value="always_hd">4K</option>
+            <option value="mostly_hd">FHD</option>
+            <option value="sometimes_hd">HD</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label
+            >Have you experienced any technical issues while using
+            Netflix?</label
+          >
+          <div class="form-check">
+            <input
+              type="radio"
+              name="technical_issues"
+              value="no_issues"
+              class="form-check-input"
+            />
+            <label class="form-check-label">No issues</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              name="technical_issues"
+              value="minor_issues"
+              class="form-check-input"
+            />
+            <label class="form-check-label">Minor issues</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              name="technical_issues"
+              value="major_issues"
+              class="form-check-input"
+            />
+            <label class="form-check-label">Major issues</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              name="technical_issues"
+              value="frequent_issues"
+              class="form-check-input"
+            />
+            <label class="form-check-label">Frequent issues</label>
+          </div>
+        </div>
+
+        <input type="submit" value="Submit Survey" class="btn btn-primary" />
+      </form>
+      <p class="signature">Survey by: Bariq Talib</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
